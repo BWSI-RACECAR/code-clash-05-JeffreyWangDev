@@ -108,15 +108,7 @@ MORSE_CODE_DICT = { 'A':'.-', 'B':'-...',
 
 class Solution:
     def encrypt(self, message):
-            #type message: string
-            #return type: string
-            
-            #TODO: Write code below to return a string with the solution to the prompt.
-            end = ""
-            for i in message:
-                end+=(MORSE_CODE_DICT[i.upper()])+" "
-            end = end[:-1]
-            return end
+            return "".join(MORSE_CODE_DICT[i.upper()]+" " for i in message)[:-1]
 
 def main():
      str1=input()
